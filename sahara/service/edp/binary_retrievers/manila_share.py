@@ -16,6 +16,9 @@
 from sahara.service.edp import job_utils
 from sahara.service import shares as shares_service
 
+#DATA_SOURCE
+
+# This will be only present at the manila plugin
 
 def get_file_info(job_binary, remote):
     shares = []
