@@ -22,6 +22,7 @@ from sahara.i18n import _
 
 conductor = c.API
 
+#*DATA_SOURCE
 data_source_type = {
     "type": "string",
     "enum": ["swift", "hdfs", "maprfs", "manila"]

@@ -42,7 +42,7 @@ def get_raw_binary(job_binary, proxy_configs=None,
     if url.startswith("internal-db://"):
         res = db.get_raw_data(context.ctx(), job_binary)
 
-    #DATA_SOURCE
+    #*DATA_SOURCE
     # this will be plugin responsibiliy
     # Probably this file is going to be a method at the Plugin
     # and will not exist at all.

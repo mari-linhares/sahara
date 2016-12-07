@@ -25,7 +25,7 @@ from sahara.swift import utils as su
 CONF = cfg.CONF
 LOG = logging.getLogger(__name__)
 
-
+#*DATA_SOURCE
 def check_job_binary(data, **kwargs):
     job_binary_url = data.get("url", None)
     extra = data.get("extra", {})

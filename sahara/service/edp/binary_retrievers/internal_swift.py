@@ -27,7 +27,7 @@ from sahara.utils.openstack import swift as sw
 
 CONF = cfg.CONF
 
-#DATA_SOURCE
+#*DATA_SOURCE
 # probably all these functions can be reused and will not need the
 # job_binary as a parameter
 
