@@ -29,3 +29,10 @@ License
 -------
 
 Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
+
+
+Data Source
+==========================================
+
+This fork contains the tag #DATA_SOURCE at files and lines that will need
+to be changed when the Data Source Abstraction exists.
