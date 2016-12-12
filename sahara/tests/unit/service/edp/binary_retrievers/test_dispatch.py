@@ -18,6 +18,7 @@ import mock
 from sahara.service.edp.binary_retrievers import dispatch
 from sahara.tests.unit import base
 
+#*DATA_SOURCE
 
 class TestDispatch(base.SaharaTestCase):
     def setUp(self):
