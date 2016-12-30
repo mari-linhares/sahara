@@ -24,12 +24,15 @@ from sahara import exceptions as ex
 from sahara.i18n import _
 from sahara.plugins import opts as plugins_base
 from sahara.service.castellan import config as castellan
+from sahara.service.edp.data_sources import opts as data_source
+from sahara.service.edp.job_binaries import opts as job_binary
 from sahara.topology import topology_helper
 from sahara.utils.notification import sender
 from sahara.utils.openstack import cinder
 from sahara.utils.openstack import keystone
 from sahara.utils import remote
 from sahara import version
+
 
 
 cli_opts = [
@@ -78,7 +81,7 @@ networking_opts = [
                help="The suffix of the node's FQDN. In nova-network that is "
                     "the dhcp_domain config parameter."),
     cfg.BoolOpt('use_neutron',
-                default=False,
+                default=True,
                 help="Use Neutron Networking (False indicates the use of Nova "
                      "networking)."),
     cfg.BoolOpt('use_namespaces',
@@ -180,7 +183,9 @@ def list_opts():
                          heat_engine.heat_engine_opts,
                          templates.heat_engine_opts,
                          ssh_remote.ssh_config_options,
-                         castellan.opts)),
+                         castellan.opts,
+                         data_source.opts,
+                         job_binary.opts)),
         (poll_utils.timeouts.name,
          itertools.chain(poll_utils.timeouts_opts)),
         (api.conductor_group.name,

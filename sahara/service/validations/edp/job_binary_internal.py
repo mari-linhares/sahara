@@ -23,10 +23,7 @@ CONF = cfg.CONF
 
 
 def is_internal_db_enabled():
-    if not CONF.edp_internal_db_enabled:
-        return False
-    return True
-
+    return CONF.edp_internal_db_enabled
 
 def check_job_binary_internal(data, **kwargs):
     if not is_internal_db_enabled():
